@@ -1,0 +1,14 @@
+Jogo: truco
+Items: um baralho
+Jogo: 
+Avaliação: 5
+Jogo: truco
+Avaliação: 5
+Jogo: 
+Items: ela entrou ali agora
+Jogo: aí ela viu eu falando de jogo ela tá pedindo o nome do jogo
+Items: 
+Jogo: 
+Items: um baralho
+Jogo: truco
+Avaliação: 5
