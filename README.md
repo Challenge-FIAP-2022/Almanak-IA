@@ -11,7 +11,7 @@ pip install pyttsx3 // para realização do TTS
 
 pip install opencv-python // para utilização do algoritmo de detecção facial
 
-pip install PyAudio // para utilização do periféricos de áudio do computador(Caso tenha problemas com a instalação padrão: https://www.youtube.com/watch?v=vHRG27p7YIQ)
+pip install PyAudio // para utilização do periféricos de áudio do computador (Caso tenha problemas com a instalação padrão: https://www.youtube.com/watch?v=vHRG27p7YIQ)
 
 pip install python-dotenv // para utilização de variáveis de ambiante, nesse caso API keys
 
