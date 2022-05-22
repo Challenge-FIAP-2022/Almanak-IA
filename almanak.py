@@ -2,12 +2,13 @@
 """
 IA para ser usada no app
 """
+import random
+import os
 import speech_recognition as sr
 import pyttsx3
 import cv2
 import requests
-import os
-import random
+
 from dotenv import load_dotenv
 
 load_dotenv()  # carregando arquivo de variaveis de ambiante que vamos usar na API de clima
@@ -51,10 +52,6 @@ def take_command():
             # Usa a API do google para realizar o STT
             command = listener.recognize_google(voice, language='pt')
             command = command.lower()
-            if "sexta-feira" in command:
-                # Tira o nome da nossa assistente do comando
-                # command = command.replace("sexta-feira", "")
-                print(command)  # Printa o que a API do google retorna
 
         except:
             pass
@@ -84,7 +81,7 @@ def integrantes():
     integrantes.close()
 
 
-def newGame(command):
+def newGame():
     """
     Função que cadastra um novo jogo na base de dados do aplicativo
     """
@@ -101,7 +98,7 @@ def newGame(command):
     bancoDeJogos.close()
 
 
-def ratingGame(command):
+def ratingGame():
     """
     Função que permite o usuário avalizar os jogos já existentes
     """
@@ -142,13 +139,13 @@ def tempo():
 
 # Lista de palavras que ativam suas respectivas funções
 comandos = {
-    'avaliar': lambda x: ratingGame(x),
-    'jogo': lambda x: newGame(x),
+    'avaliar': lambda x: ratingGame(),
+    'cadastrar': lambda x: newGame(),
     'criadores': lambda x: integrantes(),
     'tempo': lambda x: tempo(),
     'clima': lambda x: tempo(),
     'recomenda': lambda x: sugerirJogo(jogos),
-    'sugira': lambda x: sugerirJogo(jogos),
+    'sugira': lambda x: sugerirJogo(),
 
 }
 
